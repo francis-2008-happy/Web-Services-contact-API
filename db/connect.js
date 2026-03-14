@@ -10,6 +10,9 @@ const initDb = (callback) => {
     console.log('Db is already initialized!');
     return callback(null, _db);
   }
+  if (!process.env.MONGODB_URI) {
+    return callback(new Error('MONGODB_URI is not set. Add it in your environment variables.'));
+  }
   MongoClient.connect(process.env.MONGODB_URI)
     .then((client) => {
       _db = client;
