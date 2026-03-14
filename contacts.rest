@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:3000
+
+### Get all contacts
+GET {{baseUrl}}/contacts
+
+### Get one contact by id (replace id)
+GET {{baseUrl}}/contacts/REPLACE_WITH_CONTACT_ID
+
+### Create contact
+POST {{baseUrl}}/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Walker",
+  "email": "alice.walker@example.com",
+  "favoriteColor": "Orange",
+  "birthday": "1994-12-02"
+}
+
+### Update contact (replace id)
+PUT {{baseUrl}}/contacts/REPLACE_WITH_CONTACT_ID
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Walker",
+  "email": "alice.walker.updated@example.com",
+  "favoriteColor": "Teal",
+  "birthday": "1994-12-02"
+}
+
+### Delete contact (replace id)
+DELETE {{baseUrl}}/contacts/REPLACE_WITH_CONTACT_ID
+
+### Swagger UI
+GET {{baseUrl}}/api-docs

@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
+const swaggerUi = require('swagger-ui-express');
 const mongodb = require('./db/connect');
+const swaggerDocument = require('./swagger');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,6 +13,7 @@ app.use(express.json());
 
 // Routes
 app.use('/', require('./routes'));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Initialize database connection and start server
 mongodb.initDb((err) => {
