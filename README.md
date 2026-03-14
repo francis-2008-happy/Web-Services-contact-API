@@ -55,12 +55,6 @@ npm start
 
 The server will start on `http://localhost:3000`
 
-## API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /contacts | Get all contacts |
-| GET | /contacts/:id | Get a single contact by ID |
 
 ## Deployment to Render
 
@@ -75,34 +69,10 @@ The server will start on `http://localhost:3000`
    - Value: Your MongoDB connection string
 6. Deploy!
 
-## Project Structure
-
-```
-├── controllers/
-│   └── contacts.js      # Contact controller functions
-├── db/
-│   └── connect.js       # MongoDB connection
-├── routes/
-│   ├── index.js         # Main router
-│   └── contacts.js      # Contact routes
-├── .env                 # Environment variables (not committed)
-├── .gitignore          # Git ignore file
-├── package.json        # NPM package configuration
-├── sampleContacts.json # Sample data for import
-├── server.js           # Main application entry point
-└── README.md           # This file
-```
 
 ## Testing
 
 Test the API using:
 - Browser: `http://localhost:3000/contacts`
-- curl: `curl http://localhost:3000/contacts`
-- Postman or similar API testing tool
 
-## Week 02 (Coming Soon)
 
-- POST /contacts - Create a new contact
-- PUT /contacts/:id - Update an existing contact
-- DELETE /contacts/:id - Delete a contact
-- Swagger API Documentation
